@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .message-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 90%;
+            width: 300px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h2>Enter Our Anniversary Date</h2>
+        <input type="password" id="password" placeholder="DD-MM-YYYY">
+        <button onclick="checkPassword()">Submit</button>
+        <div id="loveMessage" class="hidden">
+            <h3>To my beautiful girl ❤️</h3>
+            <p> I know we are not the same as before. but you have to know that I still love you like the day we started. i force my self to stay away from you that really hard . With or without me, I hope you are happy every time. Your smile is beautiful. There is no way that I can take you out of my heart, I want to be your last kiss, your last hug. I will wait for you until one day we come back, and this time we will not break up anymore. I will keep fighting. Lastly, I will give you a ផ្កាស្លា and we will get married. I love you from a man who loves you the most ❤️ </p>
+        </div>
+    </div>
+
+    <script>
+        let attempts = 0;
+        function checkPassword() {
+            var input = document.getElementById('password').value;
+            var correctDate = "14072024"; // Set your actual anniversary date here
+            if (input === correctDate) {
+                document.getElementById('loveMessage').classList.remove('hidden');
+            } else {
+                attempts++;
+                if (attempts >= 2) {
+                    alert('The correct date is ' + correctDate);
+                } else {
+                    alert('Wrong date! Try again, my love.');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
